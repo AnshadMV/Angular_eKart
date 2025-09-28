@@ -1,0 +1,27 @@
+*{
+  color:  #ffffff ;
+}
+.top-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4285F4;
+  padding: 5px 20px;
+  font-size: 18px;
+  
+  
+}
+
+.contact-info span {
+  margin-right: 20px;
+}
+
+.user-links a {
+  text-decoration: none;
+  margin-left: 10px;
+  
+}
+
+.user-links a:hover {
+  text-decoration: underline;
+}

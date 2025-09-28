@@ -1,0 +1,15 @@
+<div class="ekart--search--product">
+    <input class="ekart-search-product-input" [(ngModel)]="searchfield">
+    <button [ngClass]="{ 'btn':true , 'btn-search': searchfield , 'btn-search-disabled':!searchfield}"
+        [disabled]="!searchfield">Search</button>
+</div>
+
+
+
+<div class="ekart-search-result-for">
+    <p> <strong>
+            Search result for:
+        </strong>
+        {{searchfield}}
+    </p>
+</div>

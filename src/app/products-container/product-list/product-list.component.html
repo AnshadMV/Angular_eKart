@@ -1,0 +1,46 @@
+<!-- Data Binding
+<img class="product1Details" src={{product1Details.pImage}}>
+<div>{{productCategory}}</div>
+<div>{{productNumber}}</div>
+
+DataBinding in object
+<div>Name : {{product1Details.name}}</div>
+<div>Color : {{product1Details.color}}</div>
+<div>Weight : {{ product1Details.weight}}</div>
+<div>{{ '$' +product1Details.prise}}</div>
+
+<div> Dicounted prise : {{ product1Details.prise - (product1Details.prise * product1Details.discount / 100)}}</div>
+<div>Dicounted prise :  {{getdiscount().toFixed(1)}}</div>
+<p> {{ product1Details.isStock > 0 ? 'only ' + product1Details.isStock + ' Stocks' : 'Not in stock'  }}</p>
+ Property Binding 
+<img [src] = "product1Details.pImage"> -->
+
+<!-- 
+<div class="product-list-container" *ngFor="let p of products">
+    <div class="product-lists">
+        <div><img class="product-list-image" [src]="p.imageURL"></div>
+        <div><span>{{p.id}} : </span><span>{{p.name}}</span></div>
+        <p>{{p.description}}</p>
+        <div><span>{{p.color}}</span></div>
+        <div><span>{{p.brand}}</span></div>
+        <div><span>{{p.gender}}</span></div>
+        <div><span>{{p.category}}</span></div>
+        <div><span>{{p.size}}</span></div>
+        <div><span>{{p.price}}</span></div>
+        <div><span>{{p.items_left}}</span></div>
+
+    </div>
+</div> -->
+<app-filter [all]='totalProductscount' [inStock]="totalProductsinStockcount" [outStock]="totalProductsoutStockcount"
+    (selectedFiltereRadioButtonChanged)="onFilterChanged($event)">
+</app-filter>
+
+
+<div class="ekart-products-container">
+    <div *ngFor="let p of products;">
+        <app-product [product]="p" *ngIf="selectedFilterRadioButton === 'all' || 
+       (selectedFilterRadioButton === 'In Stock' && p.is_in_inventory === true) || 
+       (selectedFilterRadioButton === 'Out of Stock' && p.is_in_inventory === false)">
+        </app-product>
+    </div>
+</div>

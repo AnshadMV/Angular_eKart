@@ -1,0 +1,9 @@
+<!-- app.component.html -->
+<div>
+  {{ pageTitle }}
+</div>
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <input formControlName="username">
+  <input formControlName="email">
+  <button type="submit">Submit</button>
+</form>

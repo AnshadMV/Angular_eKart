@@ -1,0 +1,73 @@
+<div class="ekart-product-item">
+    <!-- Wishlist -->
+    <div class="ekart-wishlist-sale-container">
+        <div class="ekart-add-to-wishlist">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        </div>
+    </div>
+    <!-- Image with Discount Tag -->
+    <div class="ekart-product-image">
+        <div class="ekart-discount-tag" *ngIf="product.discount">
+            {{ product.discount }}% OFF
+        </div>
+
+    </div>
+    <!-- Image -->
+    <div class="ekart-product-image">
+        <img [src]="product.imageURL" alt="{{ product.name || product.id }}">
+    </div>
+
+    <!-- ID -->
+    <div class="ekart-product-id">
+        ID: {{ product.id }}
+    </div>
+
+    <!-- Name -->
+    <div class="ekart-product-name">
+        {{ product.name }}
+    </div>
+
+    <!-- Description -->
+    <div class="ekart-product-description">
+        {{ product.description }}
+    </div>
+
+    <!-- Brand, Gender, Category -->
+    <div class="ekart-product-category">
+        Brand: {{ product.brand }} • Gender: {{ product.gender }} • Category: {{ product.category }}
+    </div>
+
+    <!-- Sizes -->
+    <div class="ekart-product-size">
+        Sizes: {{ product.size?.join(', ') }}
+    </div>
+
+    <!-- Colors -->
+    <div class="ekart-product-color">
+        Colors: {{ product.color?.join(', ') }}
+    </div>
+    <!-- Price -->
+    <div class="ekart-add-to-price">
+        Price: {{ product.price | currency:'INR' }}
+    </div>
+    <!-- Slug -->
+    <div class="ekart-product-slug">
+        Slug: {{ product.slug }}
+    </div>
+
+    <!-- Add to Cart -->
+    <div class="ekart-product-actions">
+        <button [disabled]="!product.is_in_inventory" class="ekart-add-to-cart">
+            Add to Cart
+        </button>
+    </div>
+    <!-- Inventory -->
+    <div class="ekart-product-inventory"
+        [ngStyle]="{ 'background-color' : product.is_in_inventory ? '#e6ffe6' : '#ffe6e6' , 'font-weight':product.is_in_inventory ?'bold': '100px' }">
+        In Stock: {{ product.is_in_inventory ? 'Yes' : 'No' }} • Items Left: {{ product.items_left }}
+    </div>
+
+    <div class="ekart-discount-tag-price" *ngIf="product.discount">
+        Discout Price : {{100- ( product.discount / product.price * 100)| currency:'INR' }}
+    </div>
+</div>

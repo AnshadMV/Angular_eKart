@@ -1,0 +1,91 @@
+/* * {
+    width: 300px;
+}
+
+.product1Details {
+    height: 150px;
+    width: 200px;
+    
+}
+
+
+.product-list-container {
+    display: flex;
+    flex-direction: row;
+    
+    margin: 150px;
+
+}
+
+.product-lists {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 20px;
+    border: 1px green solid;
+    
+}
+
+
+.product-list-image {
+    margin: 20px;
+    height: 200px;
+    width:250px;
+} */
+
+
+
+
+
+/* -------------------GPT ---------------------- */
+/* -------------------GPT ---------------------- */
+/* -------------------GPT ---------------------- */
+/* -------------------GPT ---------------------- */
+/* -------------------GPT ---------------------- */
+/* -------------------GPT ---------------------- */
+/* -------------------GPT ---------------------- */
+/* -------------------GPT ---------------------- */
+/* -------------------GPT ---------------------- */
+
+
+
+.search-text-showing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 70px 150px 0px 150px;
+}
+
+
+
+/* Container for all products */
+/* Container for all products */
+/* Container for all products */
+/* Container for all products */
+/* Container for all products */
+/* Container for all products */
+/* Container for all products */
+/* Container for all products */
+/* Container for all products */
+/* Container for all products */
+/* Container for all products */
+.ekart-products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 0px 150px 150px 150px;
+    /* Ensure grid items wrap properly */
+    grid-auto-rows: 1fr;
+}
+
+.ekart-products-container > div {
+    margin: 0;
+    padding: 0;
+    display: contents;
+}
+
+/* Alternative: If you want to keep the wrapper div */
+.ekart-products-container > .product-wrapper {
+    display: flex;
+    flex-direction: column;
+}
