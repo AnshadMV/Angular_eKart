@@ -11,11 +11,13 @@ import { MyServiceService } from '../services/my-service.service';
   templateUrl: './top-header.component.html',
   styleUrls: ['./top-header.component.css']
 })
+
 export class TopHeaderComponent {
   private myServices= inject(MyServiceService)
   
   headerClicked(){
-    this.myServices.showConfirm(" Big Billion days Are Coming")
+    this.myServices.showConfirm("Anshad Velldath")
   }
-
 }
+
+
